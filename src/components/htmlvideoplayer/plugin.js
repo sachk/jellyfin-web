@@ -322,8 +322,9 @@ define(['browser', 'require', 'events', 'apphost', 'loading', 'dom', 'playbackMa
                 requireHlsPlayer(function () {
 
                     var hls = new Hls({
-                        manifestLoadingTimeOut: 20000
-                        //appendErrorMaxRetry: 6,
+                        manifestLoadingTimeOut: 20000,
+                        maxBufferSize: 120000000,
+                        appendErrorMaxRetry: 6
                         //debug: true
                     });
                     hls.loadSource(url);

@@ -324,7 +324,8 @@ define(['browser', 'require', 'events', 'apphost', 'loading', 'dom', 'playbackMa
                     var hls = new Hls({
                         manifestLoadingTimeOut: 20000,
                         maxBufferSize: 120000000,
-                        appendErrorMaxRetry: 6
+                        appendErrorMaxRetry: 3,
+                        autoStartLoad=false
                         //debug: true
                     });
                     hls.loadSource(url);
